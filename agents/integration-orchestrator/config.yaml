@@ -1,0 +1,21 @@
+name: integration-orchestrator
+description: Complex system integration coordination
+version: 1.0.0
+status: stable
+tier: strategic
+category: architecture
+requires_opus: true
+triggers:
+  keywords:
+  - integration
+  - system integration
+  - api integration
+  - third-party integration
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api

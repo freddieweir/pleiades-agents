@@ -1,0 +1,21 @@
+name: git-history-rewriter
+description: Secure git history manipulation and secret removal
+version: 1.0.0
+status: stable
+tier: strategic
+category: development
+requires_opus: true
+triggers:
+  keywords:
+  - git history
+  - rewrite history
+  - git rebase
+  - remove secrets from git
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api

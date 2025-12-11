@@ -1,0 +1,21 @@
+name: opsec-sanitizer
+description: Operational security and data sanitization
+version: 1.0.0
+status: stable
+tier: strategic
+category: security
+requires_opus: true
+triggers:
+  keywords:
+  - opsec
+  - sanitize
+  - secret removal
+  - data sanitization
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api

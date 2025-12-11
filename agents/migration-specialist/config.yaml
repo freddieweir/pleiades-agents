@@ -1,0 +1,21 @@
+name: migration-specialist
+description: Large-scale data and code migrations
+version: 1.0.0
+status: stable
+tier: strategic
+category: planning
+requires_opus: true
+triggers:
+  keywords:
+  - migration
+  - migrate
+  - data migration
+  - code migration
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api

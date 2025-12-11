@@ -1,0 +1,22 @@
+name: project-planner
+description: Strategic project planning and roadmap development
+version: 1.0.0
+status: stable
+tier: strategic
+category: planning
+requires_opus: true
+triggers:
+  keywords:
+  - project plan
+  - roadmap
+  - planning
+  - milestones
+  - timeline
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api

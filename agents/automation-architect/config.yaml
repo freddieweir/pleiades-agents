@@ -1,0 +1,20 @@
+name: automation-architect
+description: Automation strategy and workflow design
+version: 1.0.0
+status: stable
+tier: strategic
+category: architecture
+requires_opus: true
+triggers:
+  keywords:
+  - automation strategy
+  - workflow automation
+  - automation design
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api

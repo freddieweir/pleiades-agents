@@ -1,0 +1,21 @@
+name: architecture-designer
+description: System architecture design and technical decision-making
+version: 1.0.0
+status: stable
+tier: strategic
+category: architecture
+requires_opus: true
+triggers:
+  keywords:
+  - architecture
+  - system design
+  - technical design
+  - design patterns
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api

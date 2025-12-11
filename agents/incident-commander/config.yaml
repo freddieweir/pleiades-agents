@@ -1,0 +1,28 @@
+name: incident-commander
+description: Emergency response coordination and crisis management
+version: 1.0.0
+status: stable
+tier: strategic
+category: crisis
+requires_opus: true
+triggers:
+  keywords:
+  - incident
+  - emergency
+  - crisis
+  - outage
+  - production down
+  - critical bug
+  - security breach
+  - urgent fix
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api
+delegates_to:
+- documentation-writer
+- pattern-follower

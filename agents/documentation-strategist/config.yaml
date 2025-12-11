@@ -1,0 +1,20 @@
+name: documentation-strategist
+description: Documentation architecture and content strategy
+version: 1.0.0
+status: stable
+tier: strategic
+category: development
+requires_opus: true
+triggers:
+  keywords:
+  - documentation strategy
+  - docs architecture
+  - content strategy
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api

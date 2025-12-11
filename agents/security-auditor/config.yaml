@@ -1,0 +1,28 @@
+name: security-auditor
+description: Comprehensive security analysis and vulnerability assessment
+version: 1.0.0
+status: stable
+tier: strategic
+category: security
+requires_opus: true
+triggers:
+  keywords:
+  - security audit
+  - vulnerability
+  - security review
+  - threat model
+  - security assessment
+  - penetration test
+  - security scan
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api
+delegates_to:
+- documentation-writer
+- secret-scanner
+- vulnerability-scanner

@@ -1,0 +1,22 @@
+name: performance-optimizer
+description: Deep performance analysis and optimization
+version: 1.0.0
+status: stable
+tier: strategic
+category: performance
+requires_opus: true
+triggers:
+  keywords:
+  - performance
+  - optimization
+  - slow
+  - bottleneck
+  - profiling
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api
