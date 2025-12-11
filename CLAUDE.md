@@ -69,7 +69,7 @@ Concrete usage examples.
 - Don't do that
 ```
 
-### config.yaml Schema
+### config.yaml Schema (v2)
 
 ```yaml
 name: agent-name              # kebab-case, matches directory
@@ -88,13 +88,28 @@ triggers:
 
 runtime:
   mode: on-demand | preload   # on-demand = agent, preload = skill
-  preferred: gemini-cli | claude-native | mcp
-  fallback: claude-api
+  discovery: claude-native    # How orchestrator discovers agent
+  execution:
+    preferred: gemini-cli     # Primary execution runtime
+    fallbacks:
+      - mcp                   # Open-WebUI, LM Studio (model-agnostic)
+      - claude-api            # Direct Claude if needed
 
 delegates_to:                 # strategic agents only
   - pattern-follower
   - commit-writer
 ```
+
+### Runtime Options
+
+| Runtime | Model Lock-in | Use Case |
+|---------|---------------|----------|
+| `claude-native` | Claude only | Skills for discovery/routing |
+| `gemini-cli` | Gemini only | Delegated execution (1M token context) |
+| `mcp` | **Any model** | Open-WebUI + Ollama, LM Studio, etc. |
+| `claude-api` | Claude only | Direct API calls |
+
+See [docs/SCHEMA.md](docs/SCHEMA.md) for full schema documentation.
 
 ## Common Commands
 
@@ -116,7 +131,7 @@ uv run python -m adapters.mcp_server
 
 1. Create directory: `mkdir agents/{agent-name}`
 2. Write AGENT.md with instructions
-3. Create config.yaml:
+3. Create config.yaml (v2 schema):
    ```yaml
    name: agent-name
    description: What it does
@@ -128,7 +143,12 @@ uv run python -m adapters.mcp_server
      keywords: ["trigger1", "trigger2"]
    runtime:
      mode: preload
-     preferred: claude-native
+     discovery: claude-native
+     execution:
+       preferred: claude-native
+       fallbacks:
+         - gemini-cli
+         - mcp
    ```
 4. Run validation: `uv run python tests/validate_agents.py`
 5. Regenerate skills if tactical: `uv run python adapters/claude-skill/generate-skills.py`
