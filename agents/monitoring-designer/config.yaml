@@ -1,0 +1,21 @@
+name: monitoring-designer
+description: Observability architecture and monitoring strategy
+version: 1.0.0
+status: stable
+tier: strategic
+category: operations
+requires_opus: true
+triggers:
+  keywords:
+  - monitoring strategy
+  - observability
+  - alerting strategy
+  - metrics design
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api

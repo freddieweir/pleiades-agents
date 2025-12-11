@@ -1,0 +1,21 @@
+name: testing-strategist
+description: Test strategy development and coverage planning
+version: 1.0.0
+status: stable
+tier: strategic
+category: development
+requires_opus: true
+triggers:
+  keywords:
+  - test strategy
+  - testing plan
+  - test coverage
+  - qa strategy
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api

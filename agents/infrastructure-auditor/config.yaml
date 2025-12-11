@@ -1,0 +1,21 @@
+name: infrastructure-auditor
+description: Infrastructure security and compliance auditing
+version: 1.0.0
+status: stable
+tier: strategic
+category: operations
+requires_opus: true
+triggers:
+  keywords:
+  - infrastructure audit
+  - cloud security
+  - compliance
+  - infrastructure review
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api

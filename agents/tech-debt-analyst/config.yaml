@@ -1,0 +1,21 @@
+name: tech-debt-analyst
+description: Technical debt analysis and prioritization
+version: 1.0.0
+status: stable
+tier: strategic
+category: development
+requires_opus: true
+triggers:
+  keywords:
+  - technical debt
+  - tech debt
+  - code debt
+  - debt analysis
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api

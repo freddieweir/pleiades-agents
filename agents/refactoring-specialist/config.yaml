@@ -1,0 +1,21 @@
+name: refactoring-specialist
+description: Large-scale code refactoring and modernization
+version: 1.0.0
+status: stable
+tier: strategic
+category: development
+requires_opus: true
+triggers:
+  keywords:
+  - refactor
+  - refactoring
+  - code modernization
+  - restructure
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api

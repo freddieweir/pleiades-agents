@@ -1,0 +1,21 @@
+name: ci-debugger
+description: CI/CD pipeline debugging and optimization
+version: 1.0.0
+status: stable
+tier: strategic
+category: development
+requires_opus: true
+triggers:
+  keywords:
+  - ci failure
+  - pipeline failure
+  - build failure
+  - ci debug
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api

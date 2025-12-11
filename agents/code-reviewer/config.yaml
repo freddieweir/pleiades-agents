@@ -1,0 +1,24 @@
+name: code-reviewer
+description: Deep code analysis and quality assurance
+version: 1.0.0
+status: stable
+tier: strategic
+category: development
+requires_opus: true
+triggers:
+  keywords:
+  - code review
+  - review code
+  - quality check
+  - pr review
+  - code analysis
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api
+delegates_to:
+- linting-fixer

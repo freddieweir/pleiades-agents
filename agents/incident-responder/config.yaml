@@ -1,0 +1,21 @@
+name: incident-responder
+description: Security incident response and remediation
+version: 1.0.0
+status: stable
+tier: strategic
+category: crisis
+requires_opus: true
+triggers:
+  keywords:
+  - security incident
+  - incident response
+  - breach response
+  - compromise
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api

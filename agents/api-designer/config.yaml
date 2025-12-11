@@ -1,0 +1,21 @@
+name: api-designer
+description: API design and contract specification
+version: 1.0.0
+status: stable
+tier: strategic
+category: development
+requires_opus: true
+triggers:
+  keywords:
+  - api design
+  - api spec
+  - rest api
+  - graphql design
+runtime:
+  mode: on-demand
+  discovery: claude-native
+  execution:
+    preferred: gemini-cli
+    fallbacks:
+    - mcp
+    - claude-api
