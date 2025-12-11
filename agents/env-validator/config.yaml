@@ -1,0 +1,21 @@
+name: env-validator
+description: Environment variable validation
+version: 1.0.0
+status: draft
+tier: tactical
+category: infrastructure
+requires_opus: false
+triggers:
+  keywords:
+  - validate env
+  - environment variables
+  - .env validation
+  - env vars
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

@@ -1,0 +1,21 @@
+name: test-generator
+description: Generate test cases from code analysis
+version: 1.0.0
+status: draft
+tier: tactical
+category: testing
+requires_opus: false
+triggers:
+  keywords:
+  - generate tests
+  - create tests
+  - test generation
+  - unit tests
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

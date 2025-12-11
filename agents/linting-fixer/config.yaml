@@ -1,0 +1,24 @@
+name: linting-fixer
+description: Apply automated linting and formatting fixes
+version: 1.0.0
+status: draft
+tier: tactical
+category: code-quality
+requires_opus: false
+triggers:
+  keywords:
+  - lint
+  - format code
+  - fix linting
+  - auto-fix
+  - eslint
+  - prettier
+  - black
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

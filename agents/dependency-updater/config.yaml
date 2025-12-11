@@ -1,0 +1,21 @@
+name: dependency-updater
+description: Automated dependency version management
+version: 1.0.0
+status: draft
+tier: tactical
+category: dependencies
+requires_opus: false
+triggers:
+  keywords:
+  - update dependencies
+  - dependency update
+  - package update
+  - version bump
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

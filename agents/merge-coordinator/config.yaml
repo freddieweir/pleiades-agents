@@ -1,0 +1,21 @@
+name: merge-coordinator
+description: Conflict resolution and merge strategy
+version: 1.0.0
+status: draft
+tier: tactical
+category: git
+requires_opus: false
+triggers:
+  keywords:
+  - merge conflict
+  - resolve conflict
+  - merge strategy
+  - git merge
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

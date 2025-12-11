@@ -1,0 +1,25 @@
+name: pattern-follower
+description: Apply established code patterns consistently across the codebase
+version: 1.0.0
+status: stable
+tier: tactical
+category: development
+requires_opus: false
+triggers:
+  keywords:
+  - follow pattern
+  - apply pattern
+  - code pattern
+  - boilerplate
+  - template
+  - consistent
+  - match existing
+  - same pattern as
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

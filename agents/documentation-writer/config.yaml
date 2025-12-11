@@ -1,0 +1,21 @@
+name: documentation-writer
+description: Generate technical documentation from code
+version: 1.0.0
+status: draft
+tier: tactical
+category: documentation
+requires_opus: false
+triggers:
+  keywords:
+  - write documentation
+  - generate docs
+  - document code
+  - api docs
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

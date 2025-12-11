@@ -1,0 +1,24 @@
+name: deduplication-engine
+description: Detect and refactor inefficient code patterns (if/elif chains, repeated
+  statements, boilerplate)
+version: 1.0.0
+status: stable
+tier: tactical
+category: code-quality
+requires_opus: false
+triggers:
+  keywords:
+  - deduplicate
+  - refactor patterns
+  - clean code
+  - if elif chain
+  - repeated code
+  - code duplication
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

@@ -1,0 +1,23 @@
+name: tech-debt-scanner
+description: Detect abandoned code, broken configs, and non-functional features
+version: 1.0.0
+status: stable
+tier: tactical
+category: code-quality
+requires_opus: false
+triggers:
+  keywords:
+  - tech debt
+  - abandoned code
+  - unused
+  - broken config
+  - dead code
+  - stale
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

@@ -1,0 +1,21 @@
+name: commit-writer
+description: Generate professional conventional commit messages
+version: 1.0.0
+status: stable
+tier: tactical
+category: git
+requires_opus: false
+triggers:
+  keywords:
+  - commit message
+  - git commit
+  - conventional commit
+  - write commit
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp
