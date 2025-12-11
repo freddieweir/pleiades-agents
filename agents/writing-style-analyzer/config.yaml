@@ -1,0 +1,23 @@
+name: writing-style-analyzer
+description: Analyze and match user's personal writing style and tone
+version: 1.0.0
+status: stable
+tier: tactical
+category: documentation
+requires_opus: false
+triggers:
+  keywords:
+  - match my style
+  - sound like me
+  - my writing tone
+  - analyze my voice
+  - writing style
+  - personal voice
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

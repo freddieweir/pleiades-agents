@@ -1,0 +1,21 @@
+name: config-generator
+description: Configuration file templating
+version: 1.0.0
+status: draft
+tier: tactical
+category: infrastructure
+requires_opus: false
+triggers:
+  keywords:
+  - generate config
+  - configuration
+  - config file
+  - settings
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

@@ -1,0 +1,23 @@
+name: pr-reviewer
+description: Automated PR review and feedback
+version: 1.0.0
+status: draft
+tier: tactical
+category: git
+requires_opus: false
+triggers:
+  keywords:
+  - review pr
+  - pull request review
+  - code review
+  - pr feedback
+  - create pr
+  - pull request
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

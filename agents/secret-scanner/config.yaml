@@ -1,0 +1,21 @@
+name: secret-scanner
+description: Scan for exposed secrets and credentials
+version: 1.0.0
+status: draft
+tier: tactical
+category: security
+requires_opus: false
+triggers:
+  keywords:
+  - secret scan
+  - find secrets
+  - credential scan
+  - exposed secrets
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

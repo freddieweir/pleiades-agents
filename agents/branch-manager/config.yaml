@@ -1,0 +1,21 @@
+name: branch-manager
+description: Branch naming and lifecycle management
+version: 1.0.0
+status: draft
+tier: tactical
+category: git
+requires_opus: false
+triggers:
+  keywords:
+  - branch management
+  - create branch
+  - branch naming
+  - git branch
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

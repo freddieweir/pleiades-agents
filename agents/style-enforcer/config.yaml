@@ -1,0 +1,21 @@
+name: style-enforcer
+description: Enforce writing style guidelines
+version: 1.0.0
+status: draft
+tier: tactical
+category: code-quality
+requires_opus: false
+triggers:
+  keywords:
+  - enforce style
+  - writing style
+  - style guide
+  - consistency
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

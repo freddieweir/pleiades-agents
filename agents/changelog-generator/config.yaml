@@ -1,0 +1,21 @@
+name: changelog-generator
+description: Generate changelogs from commit history
+version: 1.0.0
+status: draft
+tier: tactical
+category: git
+requires_opus: false
+triggers:
+  keywords:
+  - changelog
+  - generate changelog
+  - release notes
+  - version history
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

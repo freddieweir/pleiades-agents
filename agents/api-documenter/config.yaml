@@ -1,0 +1,21 @@
+name: api-documenter
+description: Create API documentation and examples
+version: 1.0.0
+status: draft
+tier: tactical
+category: documentation
+requires_opus: false
+triggers:
+  keywords:
+  - api documentation
+  - api docs
+  - rest docs
+  - graphql docs
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp

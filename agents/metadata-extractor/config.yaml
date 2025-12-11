@@ -1,0 +1,21 @@
+name: metadata-extractor
+description: Extract structured data from unstructured text
+version: 1.0.0
+status: draft
+tier: tactical
+category: data
+requires_opus: false
+triggers:
+  keywords:
+  - extract metadata
+  - parse data
+  - extract information
+  - data extraction
+runtime:
+  mode: preload
+  discovery: claude-native
+  execution:
+    preferred: claude-native
+    fallbacks:
+    - gemini-cli
+    - mcp
